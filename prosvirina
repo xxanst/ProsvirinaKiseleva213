@@ -2,6 +2,7 @@ import functools
 import time
 import math
 
+
 llist = []
 print("1 - сложение;")
 print("2 - вычетание;")
@@ -12,7 +13,7 @@ print('')
 operation = int(input("Введите номер соответствующее операции: "))
 while True:
     if operation == 1:
-        count = int(input("Введите количество слагаемых: "))
+        count = int(input ("Введите количество слагаемых: "))
         print("Введите числа для выполнения операции: ")
         while count != 0:
             number = int(input())
@@ -29,20 +30,20 @@ while True:
             llist.append(number)
             count -= 1
         time.sleep(1)
-        print("Ответ: " + str(llist[0] - (sum(llist) - llist[0])))
+        print ("Ответ: " + str(llist[0] - (sum(llist)- llist[0])))
         break
     elif operation == 3:
-        count = int(input("Введите количество множителей: "))
+        count = int(input ("Введите количество множителей: "))
         print("Введите числа для выполнения операции: ")
         while count != 0:
             number = int(input())
             llist.append(number)
             count -= 1
         time.sleep(1)
-        print("Ответ: " + str(functools.reduce(lambda a, b: a * b, llist)))
+        print ("Ответ: " + str (functools.reduce(lambda a, b : a * b, llist)))
         break
     elif operation == 4:
-        count = int(input("Введите количество чисел: "))
+        count = int(input ("Введите количество чисел: "))
         x = int(input('Введите числа для выполнения операции: '))
         res = x
         count -= 1
@@ -57,7 +58,7 @@ while True:
         a = int(input("Введите число a: "))
         b = int(input("Введите число b: "))
         c = int(input("Введите число c: "))
-        dis = b ^ 2 - 4 * a * c
+        dis = b^2 - 4*a*c
         if dis > 0:
             x1 = -b - math.sqrt(dis) / 2 * a
             x2 = -b + math.sqrt(dis) / 2 * a
@@ -65,7 +66,7 @@ while True:
             print("Ответ: " + "x1 = " + str(x1) + " " + "x2 = " + str(x2))
             break
         elif dis == 0:
-            x = -b / 2 * a
+            x = -b / 2*a
             time.sleep(1)
             print("Ответ: " + "x = " + str(x))
             break
@@ -85,5 +86,7 @@ while True:
         print(' ')
         operation = int(input("Попробуйте еще раз: "))
         print(' ')
+
+
 
 #    a*x^2 + b*x + c = 0
